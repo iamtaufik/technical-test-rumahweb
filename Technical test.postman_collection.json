@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "576fbba2-c0e0-4e61-b84f-88c4720d8fd5",
+		"name": "Technical test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20341209",
+		"_collection_link": "https://sengkuni.postman.co/workspace/e7f0152d-2a7f-471c-9ad8-c63c3913d9cb/collection/20341209-576fbba2-c0e0-4e61-b84f-88c4720d8fd5?action=share&source=collection_link&creator=20341209"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Taufik Hidayat\",\r\n    \"email\": \"taufik2@mail.com\",\r\n    \"password\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"taufik@mail.com\",\r\n    \"password\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNtYnp6cmh4azAwMDB2MDFjcXU1bDV0N3IiLCJpYXQiOjE3NTAxMzM2NTQsImV4cCI6MTc1MDczODQ1NH0.bjVZ_RxfS7jJUkC62SG-b17H70WtAcuUD2yP3lyaTVQ",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Detail User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNtYnp6cmh4azAwMDB2MDFjcXU1bDV0N3IiLCJpYXQiOjE3NTAxMzM2NTQsImV4cCI6MTc1MDczODQ1NH0.bjVZ_RxfS7jJUkC62SG-b17H70WtAcuUD2yP3lyaTVQ",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/users/cmbzzrhxk0000v01cqu5l5t7r"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNtYnp6cmh4azAwMDB2MDFjcXU1bDV0N3IiLCJpYXQiOjE3NTAxMzM2NTQsImV4cCI6MTc1MDczODQ1NH0.bjVZ_RxfS7jJUkC62SG-b17H70WtAcuUD2yP3lyaTVQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"taufik updated\",\r\n    \"email\": \"taufik@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/cmbzzrhxk0000v01cqu5l5t7r"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/users/cmbzzrhxk0000v01cqu5l5t7r"
+			},
+			"response": []
+		}
+	]
+}
