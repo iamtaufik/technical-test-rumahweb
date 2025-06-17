@@ -32,8 +32,16 @@ Panduan singkat untuk menginstal dan menjalankan project ini di local developmen
    ```bash
    cp .env.example .env
    ```
+5. **Migrate database**
 
-5. **Menjalankan Projek**
+   Salin isi dari .env.example ke file .env, lalu sesuaikan nilainya dengan kebutuhan Anda.
+
+   ```bash
+   npx prisma db push
+   ```
+
+
+6. **Menjalankan Projek**
 
    ```bash
    pnpm dev
